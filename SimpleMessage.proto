@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "/;main";
+//option java_package = "com.xyz.test";
+//option java_outer_classname = "SimpleMessageModel";
+
+message SimpleMessage {
+  string Name = 1;
+  string Email = 2;
+  int32 Age = 4;
+  bool IsAProgrammer = 5;
+}
