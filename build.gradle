@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id "com.google.protobuf" version "0.8.18"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+protobuf{
+    generatedFilesBaseDir = "$projectDir/src"
+}
+
+dependencies {
+    implementation 'com.google.protobuf:protobuf-java:3.21.1'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    // https://mvnrepository.com/artifact/com.google.cloud/google-cloud-pubsub
+    implementation group: 'com.google.cloud', name: 'google-cloud-pubsub', version: '1.114.7'
+}
+
+test {
+    useJUnitPlatform()
+}
