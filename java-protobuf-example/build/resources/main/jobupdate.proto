@@ -1,0 +1,7 @@
+syntax="proto3";
+
+message JobUpdateBean {
+    int64 receivedOn = 1;
+    string desc = 2;
+    repeated string users = 3;
+}
